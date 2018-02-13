@@ -43,7 +43,7 @@ $defaultLang = \App\Models\Language::where('default', 1)->first();
 				<ul class="nav navbar-nav navbar-left">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<span>Hire Freelancers</span>
+							<span>Hire Freelancers Now!</span>
 							<i class=" icon-down-open-big fa"></i>
 						</a>
 						<ul class="dropdown-menu user-menu">
