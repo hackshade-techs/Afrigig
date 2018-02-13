@@ -15,127 +15,14 @@
 
 @section('search')
 	@parent
+	<div class="clearfix"></div>
 	@include('home.inc.search')
 @endsection
 
 @section('content')
+
 	<div class="clearfix"></div>
-	<div class="banner">
-		<div class="container">
-			<div class="banner-caption">
-				<div class="col-md-12 col-sm-12 banner-text">
-					<h1>7,000+ Browse Jobs</h1>
-					<form class="form-horizontal">
-						<div class="col-md-4 no-padd">
-							<div class="input-group"> <input type="text" class="form-control right-bor" placeholder="Skills, Designations, Companies"> </div>
-						</div>
-						<div class="col-md-3 no-padd">
-							<div class="input-group"> <input type="text" class="form-control right-bor" placeholder="Search By Location.."> </div>
-						</div>
-						<div class="col-md-3 no-padd">
-							<div class="input-group"> <select class="form-control"> <option>Select City</option> <option>New York</option> <option>San Joes</option> </select> </div>
-						</div>
-						<div class="col-md-2 no-padd">
-							<div class="input-group"> <button type="submit" class="btn btn-primary">Search Job</button> </div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="company-brand">
-			<div class="container">
-				<div id="company-brands" class="owl-carousel">
-					<div class="brand-img"><img src="img/microsoft-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/img-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/mothercare-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/paypal-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/serv-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/xerox-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/yahoo-home.png" class="img-responsive" alt="" /></div>
-					<div class="brand-img"><img src="img/mothercare-home.png" class="img-responsive" alt="" /></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-	<section class="first-feature">
-		<div class="container">
-			<div class="all-features">
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-desktop"></i></div>
-						<div class="feature-caption">
-							<h5>Web Developer</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-mobile"></i></div>
-						<div class="feature-caption">
-							<h5>Mobile Developer</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-lightbulb-o"></i></div>
-						<div class="feature-caption">
-							<h5>Creative Designer</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-file-text"></i></div>
-						<div class="feature-caption">
-							<h5>Content Writer</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-hdd-o"></i></div>
-						<div class="feature-caption">
-							<h5>Manager</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-bullhorn"></i></div>
-						<div class="feature-caption">
-							<h5>Sales & Marketing</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-credit-card"></i></div>
-						<div class="feature-caption">
-							<h5>Accountant</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 small-padding">
-					<div class="job-feature">
-						<div class="feature-icon"><i class="fa fa-user"></i></div>
-						<div class="feature-caption">
-							<h5>Management / HR</h5>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	@include('home.inc.categories')
 	<div class="clearfix"></div>
 	<section class="video-sec dark" id="video">
 		<div class="container">

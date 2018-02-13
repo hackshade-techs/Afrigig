@@ -1,13 +1,12 @@
-<div class="container-fluid home-background">
-	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
-			<h1 class="m-t-80 m-b-40" style="margin-top: 100px; margin-left: 30px; font-weight: 700; line-height:60px; font-size: 50px;">Get it done with a freelancer</h1>
-			<p style="margin-left: 25px; font-weight: 400; font-size: 20px;">Let your work be done faster, Afrigig Uganda</p>
-			<a style="margin-left: 25px;" class="btn btn-lg btn-yellow" href="{{ lurl(trans('routes.signup')) . '?type=3' }}" style="padding-left: 30px; padding-right: 30px; text-transform: none;">
-				Get Started
-			</a>
+<div class="home-plane-banner">
+	<div class="container">
+		<div class="simple-banner-caption">
+			<div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 banner-text">
+				<h1>Let's Start Your Job<br>With <span>Afrigig</span> Freelancers</h1>
+				<p>Aliquam Vestibulum Cursus Felis. In Iaculis Iaculis Sapien Ac Condimentum. Vestibulum Congue Posuere Lacus, Id Tincidunt Pellentesque Dui Non, Semper Orci. </p><a href="#" class="btn btn-banner">Get Started</a></div>
 		</div>
 	</div>
+</div>
 	{{-- <div class="intro search-width ">
 		<div class="dtable hw100">
 			<div class="dtable-cell hw100">
@@ -38,4 +37,3 @@
 			</div>
 		</div>
 	</div> --}}
-</div>

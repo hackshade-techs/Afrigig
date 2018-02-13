@@ -54,14 +54,14 @@ class HomeController extends FrontController
 
 		// Featured Ads
 		$data['latestAds'] = $this->getLatestAds();
-        
+
         // Get Categories
         $data['categories'] = $this->getCategories();
 
         // Get Cities
         $data['cities'] = $this->getLocations();
-        
-        
+
+
         // Get Bottom Infos
         if (config('settings.activation_home_stats'))
         {
@@ -73,13 +73,13 @@ class HomeController extends FrontController
             // Count Facebook fans
             $data['count_facebook_fans'] = countFacebookFans(config('settings.facebook_page_id'));
         }
-        
-        
+
+
         // Modal - States Collection
         $states = SubAdmin1::where('code', 'LIKE', $this->country->get('code') . '.%')->orderBy('name')->get(['code', 'name'])->keyBy('code');
         view()->share('states', $states);
-        
-        
+
+
         // SEO
         if (config('settings.app_name') and config('settings.app_slogan')) {
             $title = config('settings.app_name') . ' - ' . config('settings.app_slogan');
@@ -90,15 +90,15 @@ class HomeController extends FrontController
                 ['app_name' => mb_ucfirst(config('settings.app_name'))]) . ' ' . $this->country->get('name') . '. ' . t('Jobs in :location',
                 ['location' => $this->country->get('name')]) . '. ' . t('Looking for a job') . ' - ' . $this->country->get('name')),
             200);
-        
+
         // Meta Tags
         MetaTag::set('title', $title);
         MetaTag::set('description', strip_tags($description));
-        
+
         // Open Graph
         $this->og->title($title)->description($description);
         view()->share('og', $this->og);
-        
+
         return view('home.index', $data);
     }
 
@@ -106,9 +106,9 @@ class HomeController extends FrontController
 	{
 		$cats = Category::where('parent_id', 0)->where('translation_lang', $this->lang->get('abbr'))->orderBy('lft')->get();
 
-		$cols = round($cats->count() / 3, 0); // PHP_ROUND_HALF_EVEN
-		$cols = ($cols > 0) ? $cols : 1; // Fix array_chunk with 0
-		$cats = $cats->chunk($cols);
+		// $cols = round($cats->count() / 3, 0); // PHP_ROUND_HALF_EVEN
+		// $cols = ($cols > 0) ? $cols : 1; // Fix array_chunk with 0
+		// $cats = $cats->chunk($cols);
 
 		return $cats;
 	}
@@ -151,7 +151,7 @@ class HomeController extends FrontController
             $reviewedAdSql = ' AND a.reviewed = 1';
         }
         $sql = 'SELECT DISTINCT a.*, p.package_id as p_package_id' . '
-                FROM ' . table('ads') . ' as a 
+                FROM ' . table('ads') . ' as a
                 INNER JOIN ' . table('categories') . ' as c ON c.id=a.category_id AND c.active=1
                 LEFT JOIN ' . table('payments') . ' as p ON p.ad_id=a.id
                 WHERE a.country_code = :country_code AND a.active=1 AND a.archived!=1 AND a.deleted_at IS NULL ' . $reviewedAdSql . '
