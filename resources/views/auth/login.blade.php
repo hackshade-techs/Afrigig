@@ -1,16 +1,4 @@
-{{--
- * JobClass - Geolocalized Job Board Script
- * Copyright (c) BedigitCom. All Rights Reserved
- *
- * Website: http://www.bedigit.com
- *
- * LICENSE
- * -------
- * This software is furnished under a license and may be used and copied
- * only in accordance with the terms of such license and with the inclusion
- * of the above copyright notice. If you Purchased from Codecanyon,
- * Please read the full License from here - http://codecanyon.net/licenses/standard
---}}
+
 @extends('layouts.master')
 
 @section('content')
@@ -42,7 +30,7 @@
 				@endif
 
 
-				@if (config('settings.activation_social_login'))
+				<!-- @if (config('settings.activation_social_login'))
 					<div class="container text-center" style="margin-bottom: 30px;">
 						<div class="row">
 							<div class="btn btn-fb" style="width: 194px; margin-right: 1px;">
@@ -53,51 +41,63 @@
 							</div>
 						</div>
 					</div>
-				@endif
+				@endif -->
+        <!-- new login credentials -->
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="wrapper">
+              <section class="login-screen-sec">
+                <div class="container">
+                  <div class="login-screen"><a href="index.html"><img src="img/logo.png" class="img-responsive" alt=""></a>
+                    <form id="loginForm" role="form" method="POST" action="{{ lurl('login') }}">
+                      {!! csrf_field() !!}
+
+                      <!-- email address -->
+                      <div class="form-group <?php echo ($errors->has('email')) ? 'has-error' : ''; ?>">
+      									<div class="input-icon"><i class="icon-user fa"></i>
+      										<input id="email" name="email" type="text" placeholder="{{ t('Email Address') }}" class="form-control email"
+      											   value="{{ (session('email')) ? session('email') : old('email') }}">
+      									</div>
+      								</div>
+
+                      <!-- password -->
+                      <div class="form-group <?php echo ($errors->has('password')) ? 'has-error' : ''; ?>">
+      									<div class="input-icon"></i>
+      										<input id="password" name="password" type="password" class="form-control" placeholder="{{ t('Password') }}">
+      									</div>
+      								</div>
+
+                      <!-- keep me logged in  -->
+                      <div>
+        								<label>
+        									<input type="checkbox" value="1" name="remember" id="remember"> {{ t('Keep me logged in') }} </label>
+        								<p class="text-center pull-right"><a href="<?php echo lurl('password/reset'); ?>"> {{ t('Lost your password?') }} </a>
+        								</p>
+        								<div style=" clear:both"></div>
+        							</div>
 
 
-				<div class="col-sm-5 login-box">
-					<form id="loginForm" role="form" method="POST" action="{{ lurl('login') }}">
-						{!! csrf_field() !!}
-						<div class="panel panel-default">
-							<div class="panel-intro text-center">
-								<h2 class="logo-title">
-									<strong><span class="logo-icon"></span>{{ t('Log in') }}</strong>
-								</h2>
-							</div>
-							<div class="panel-body">
-								<div class="form-group <?php echo ($errors->has('email')) ? 'has-error' : ''; ?>">
-									<label for="email" class="control-label">{{ t('Email Address') }}:</label>
-									<div class="input-icon"><i class="icon-user fa"></i>
-										<input id="email" name="email" type="text" placeholder="{{ t('Email Address') }}" class="form-control email"
-											   value="{{ (session('email')) ? session('email') : old('email') }}">
-									</div>
-								</div>
-								<div class="form-group <?php echo ($errors->has('password')) ? 'has-error' : ''; ?>">
-									<label for="password" class="control-label">{{ t('Password') }}:</label>
-									<div class="input-icon"><i class="icon-lock fa"></i>
-										<input id="password" name="password" type="password" class="form-control" placeholder="{{ t('Password') }}">
-									</div>
-								</div>
-								<div class="form-group">
-									<button id="loginBtn" class="btn btn-primary btn-block"> {{ t('Login') }} </button>
-								</div>
-							</div>
-							<div class="panel-footer">
-								<label class="checkbox pull-left" style="padding-left: 20px;">
-									<input type="checkbox" value="1" name="remember" id="remember"> {{ t('Keep me logged in') }} </label>
-								<p class="text-center pull-right"><a href="<?php echo lurl('password/reset'); ?>"> {{ t('Lost your password?') }} </a>
-								</p>
-								<div style=" clear:both"></div>
-							</div>
-						</div>
-					</form>
+                      <!-- <div class="form-group">
+                        <button id="loginBtn" class="btn btn-primary btn-block"> {{ t('Login') }} </button>
+                      </div> -->
 
-					<div class="login-box-btm text-center">
-						<p> {{ t('Don\'t have an account?') }} <br>
-							<a href="<?php echo lurl(trans('routes.signup')); ?>"><strong>{{ t('Sign Up') }} !</strong> </a></p>
-					</div>
-				</div>
+                      <button class="btn btn-login" type="submit">{{ t('Login') }}</button>
+
+                      <span>{{ t('Don\'t have an account?') }}  <a href="signup.html"><a href="<?php echo lurl(trans('routes.signup')); ?>"><strong>{{ t('Sign Up') }} !</strong> </a></a></span><span>
+                  </div>
+                </div>
+              </section>
+              <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()"><i class="spin fa fa-cog" aria-hidden="true"></i></button>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- end of new login credentials -->
+
+
 
 				<?php /*@include('layouts.inc.social.horizontal')*/ ?>
 			</div>
