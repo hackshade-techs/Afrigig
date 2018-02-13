@@ -1,0 +1,183 @@
+/*
+ * JobClass - Geolocalized Job Board Script
+ * Copyright (c) BedigitCom. All Rights Reserved
+ *
+ * Website: http://www.bedigit.com
+ *
+ * LICENSE
+ * -------
+ * This software is furnished under a license and may be used and copied
+ * only in accordance with the terms of such license and with the inclusion
+ * of the above copyright notice. If you Purchased from Codecanyon,
+ * Please read the full License from here - http://codecanyon.net/licenses/standard
+ */
+@charset "utf-8";
+
+a {
+	color: #e2b405;
+}
+
+a:hover, a:focus {
+	color: #FA7722;
+}
+
+.link-color {
+	color: #e2b405;
+}
+
+::selection {
+	color: #fff;
+	background: #FFD700;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #FFD700;
+}
+
+.pace .pace-progress {
+	background: #FFD700;
+}
+
+.search-row-wrapper {
+	background: #FFD700;
+}
+
+.intro {
+	background: #FFD700;
+}
+
+.pricetag {
+	background: #ffd005;
+}
+
+.pricetag::before {
+	border-top-color: #c89b05;
+}
+
+.btn-primary {
+	background-color: #FFD700;
+	border-color: #FFD700;
+	color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	background-color: #ffec34;
+	border-color: #ffec34;
+	color: #FFFFFF;
+}
+
+.btn-primary-dark {
+	background-color: #c89b05;
+	border-color: #c89b05;
+	color: #fff;
+}
+
+.btn-primary-dark:hover, .btn-primary-dark:focus, .btn-primary-dark:active, .btn-primary-dark.active, .open .dropdown-toggle.btn-primary-dark {
+	background-color: #FFD700;
+	border-color: #FFD700;
+	color: #FFFFFF;
+}
+
+.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info.active[disabled], fieldset[disabled] .btn-info.active {
+	background-color: #ffec34;
+}
+
+.form-control:focus {
+	border-color: #FFD700;
+	box-shadow: 0 1px 0 #FFD700, 0 -1px 0 #FFD700, -1px 0 0 #FFD700, 1px 0 0 #FFD700;
+	outline: 0 none;
+}
+
+.logo, .logo-title {
+	color: #FFD700;
+}
+
+.cat-list h3 a, .cat-list h3 {
+	color: #FFD700;
+}
+
+.cat-list ul li a:hover, .cat-list a:hover {
+	color: #c89b05;
+}
+
+.list-filter ul li p.maxlist-more a {
+	color: #e2b405;
+}
+
+ul.list-link li a:hover {
+	color: #c89b05;
+}
+
+.thumb-item-link:focus {
+	-webkit-box-shadow: 0 0 2px #e2b405;
+	-moz-box-shadow: 0 0 2px #e2b405;
+	box-shadow: 0 0 2px #e2b405;
+	outline: none;
+}
+
+.thumb-item-link.active {
+	border-bottom: 4px solid #e2b405;
+}
+
+.page-bottom-info {
+	background: #FFD700;
+}
+
+button.btn-search {
+	text-shadow: 0 2px 2px #FFD700;
+	-webkit-text-shadow: 0 2px 2px #FFD700;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+	background-color: #FFD700;
+	color: #fff;
+}
+
+/* SHODOW */
+.ln-shadow {
+	background-color: #FFD700;
+	color: #fff;
+	text-shadow: 1px 1px #c89b05, 2px 2px #c89b05, 3px 3px #c89b05, 4px 4px #c89b05, 5px 5px #c89b05, 6px 6px #c89b05, 7px 7px #c89b05, 8px 8px #c89b05, 9px 9px #c89b05, 10px 10px #c89b05, 11px 11px #c89b05, 12px 12px #c89b05, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	-webkit-text-shadow: 1px 1px #c89b05, 2px 2px #c89b05, 3px 3px #c89b05, 4px 4px #c89b05, 5px 5px #c89b05, 6px 6px #c89b05, 7px 7px #c89b05, 8px 8px #c89b05, 9px 9px #c89b05, 10px 10px #c89b05, 11px 11px #c89b05, 12px 12px #c89b05, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	-moz-text-shadow: 1px 1px #c89b05, 2px 2px #c89b05, 3px 3px #c89b05, 4px 4px #c89b05, 5px 5px #c89b05, 6px 6px #c89b05, 7px 7px #c89b05, 8px 8px #c89b05, 9px 9px #c89b05, 10px 10px #c89b05, 11px 11px #c89b05, 12px 12px #c89b05, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+}
+
+.shape-0 {
+	text-shadow: 1px 1px #FFD700, 2px 2px #FFD700, 3px 3px #FFD700, 4px 4px #FFD700, 5px 5px #FFD700, 6px 6px #FFD700, 7px 7px #FFD700, 8px 8px #FFD700, 9px 9px #FFD700, 10px 10px #FFD700, 11px 11px #FFD700, 12px 12px #FFD700, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	-moz-text-shadow: 1px 1px #FFD700, 2px 2px #FFD700, 3px 3px #FFD700, 4px 4px #FFD700, 5px 5px #FFD700, 6px 6px #FFD700, 7px 7px #FFD700, 8px 8px #FFD700, 9px 9px #FFD700, 10px 10px #FFD700, 11px 11px #FFD700, 12px 12px #FFD700, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	
+	-webkit-text-shadow: 1px 1px #FFD700, 2px 2px #FFD700, 3px 3px #FFD700, 4px 4px #FFD700, 5px 5px #FFD700, 6px 6px #FFD700, 7px 7px #FFD700, 8px 8px #FFD700, 9px 9px #FFD700, 10px 10px #FFD700, 11px 11px #FFD700, 12px 12px #FFD700, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	
+	background-color: #FFD700;
+}
+
+.shape-0-shadow {
+	text-shadow: 1px 1px #c89b05, 2px 2px #c89b05, 3px 3px #c89b05, 4px 4px #c89b05, 5px 5px #c89b05, 6px 6px #c89b05, 7px 7px #c89b05, 8px 8px #c89b05, 9px 9px #c89b05, 10px 10px #c89b05, 11px 11px #c89b05, 12px 12px #c89b05, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	-moz-text-shadow: 1px 1px #c89b05, 2px 2px #c89b05, 3px 3px #c89b05, 4px 4px #c89b05, 5px 5px #c89b05, 6px 6px #c89b05, 7px 7px #c89b05, 8px 8px #c89b05, 9px 9px #c89b05, 10px 10px #c89b05, 11px 11px #c89b05, 12px 12px #c89b05, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	
+	-webkit-text-shadow: 1px 1px #c89b05, 2px 2px #c89b05, 3px 3px #c89b05, 4px 4px #c89b05, 5px 5px #c89b05, 6px 6px #c89b05, 7px 7px #c89b05, 8px 8px #c89b05, 9px 9px #c89b05, 10px 10px #c89b05, 11px 11px #c89b05, 12px 12px #c89b05, 13px 13px #FFD700, 14px 14px #FFD700, 15px 15px #FFD700, 16px 16px #FFD700, 17px 17px #FFD700, 18px 18px #FFD700, 19px 19px #FFD700, 20px 20px #FFD700, 21px 21px #FFD700, 22px 22px #FFD700, 23px 23px #FFD700, 24px 24px #FFD700, 25px 25px #FFD700, 26px 26px #FFD700, 27px 27px #FFD700, 28px 28px #FFD700;
+	
+	background-color: #FFD700;
+}
+
+/* Bootstrap Pagination Color */
+.pagination > li > a,
+.pagination > li > span {
+	color: #FFD700;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+	color: #c89b05;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	background-color: #FFD700;
+	border-color: #FFD700;
+}

@@ -1,0 +1,183 @@
+/*
+ * JobClass - Geolocalized Job Board Script
+ * Copyright (c) BedigitCom. All Rights Reserved
+ *
+ * Website: http://www.bedigit.com
+ *
+ * LICENSE
+ * -------
+ * This software is furnished under a license and may be used and copied
+ * only in accordance with the terms of such license and with the inclusion
+ * of the above copyright notice. If you Purchased from Codecanyon,
+ * Please read the full License from here - http://codecanyon.net/licenses/standard
+ */
+@charset "utf-8";
+
+a {
+	color: #369;
+}
+
+a:hover, a:focus {
+	color: #FA7722;
+}
+
+.link-color {
+	color: #369;
+}
+
+::selection {
+	color: #fff;
+	background: #4682B4;
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #4682B4;
+}
+
+.pace .pace-progress {
+	background: #4682B4;
+}
+
+.search-row-wrapper {
+	background: #4682B4;
+}
+
+.intro {
+	background: #4682B4;
+}
+
+.pricetag {
+	background: #628FB5;
+}
+
+.pricetag::before {
+	border-top-color: #3D709C;
+}
+
+.btn-primary {
+	background-color: #4682B4;
+	border-color: #4682B4;
+	color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	background-color: #628FB5;
+	border-color: #628FB5;
+	color: #FFFFFF;
+}
+
+.btn-primary-dark {
+	background-color: #426998;
+	border-color: #426998;
+	color: #fff;
+}
+
+.btn-primary-dark:hover, .btn-primary-dark:focus, .btn-primary-dark:active, .btn-primary-dark.active, .open .dropdown-toggle.btn-primary-dark {
+	background-color: #3D709C;
+	border-color: #3D709C;
+	color: #FFFFFF;
+}
+
+.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info.active[disabled], fieldset[disabled] .btn-info.active {
+	background-color: #3498DB;
+}
+
+.form-control:focus {
+	border-color: #4682B4;
+	box-shadow: 0 1px 0 #4682B4, 0 -1px 0 #4682B4, -1px 0 0 #4682B4, 1px 0 0 #4682B4;
+	outline: 0 none;
+}
+
+.logo, .logo-title {
+	color: #4682B4;
+}
+
+.cat-list h3 a, .cat-list h3 {
+	color: #4682B4;
+}
+
+.cat-list ul li a:hover, .cat-list a:hover {
+	color: #345676;
+}
+
+.list-filter ul li p.maxlist-more a {
+	color: #369;
+}
+
+ul.list-link li a:hover {
+	color: #345676;
+}
+
+.thumb-item-link:focus {
+	-webkit-box-shadow: 0 0 2px #369;
+	-moz-box-shadow: 0 0 2px #369;
+	box-shadow: 0 0 2px #369;
+	outline: none;
+}
+
+.thumb-item-link.active {
+	border-bottom: 4px solid #369;
+}
+
+.page-bottom-info {
+	background: #4682B4;
+}
+
+button.btn-search {
+	text-shadow: 0 2px 2px #4682B4;
+	-webkit-text-shadow: 0 2px 2px #4682B4;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+	background-color: #337ab7;
+	color: #fff;
+}
+
+/* SHODOW */
+.ln-shadow {
+	background-color: #4682B4;
+	color: #fff;
+	text-shadow: 1px 1px #426998, 2px 2px #426998, 3px 3px #426998, 4px 4px #426998, 5px 5px #426998, 6px 6px #426998, 7px 7px #426998, 8px 8px #426998, 9px 9px #426998, 10px 10px #426998, 11px 11px #426998, 12px 12px #426998, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	-webkit-text-shadow: 1px 1px #426998, 2px 2px #426998, 3px 3px #426998, 4px 4px #426998, 5px 5px #426998, 6px 6px #426998, 7px 7px #426998, 8px 8px #426998, 9px 9px #426998, 10px 10px #426998, 11px 11px #426998, 12px 12px #426998, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	-moz-text-shadow: 1px 1px #426998, 2px 2px #426998, 3px 3px #426998, 4px 4px #426998, 5px 5px #426998, 6px 6px #426998, 7px 7px #426998, 8px 8px #426998, 9px 9px #426998, 10px 10px #426998, 11px 11px #426998, 12px 12px #426998, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+}
+
+.shape-0 {
+	text-shadow: 1px 1px #4682B4, 2px 2px #4682B4, 3px 3px #4682B4, 4px 4px #4682B4, 5px 5px #4682B4, 6px 6px #4682B4, 7px 7px #4682B4, 8px 8px #4682B4, 9px 9px #4682B4, 10px 10px #4682B4, 11px 11px #4682B4, 12px 12px #4682B4, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	-moz-text-shadow: 1px 1px #4682B4, 2px 2px #4682B4, 3px 3px #4682B4, 4px 4px #4682B4, 5px 5px #4682B4, 6px 6px #4682B4, 7px 7px #4682B4, 8px 8px #4682B4, 9px 9px #4682B4, 10px 10px #4682B4, 11px 11px #4682B4, 12px 12px #4682B4, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	
+	-webkit-text-shadow: 1px 1px #4682B4, 2px 2px #4682B4, 3px 3px #4682B4, 4px 4px #4682B4, 5px 5px #4682B4, 6px 6px #4682B4, 7px 7px #4682B4, 8px 8px #4682B4, 9px 9px #4682B4, 10px 10px #4682B4, 11px 11px #4682B4, 12px 12px #4682B4, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	
+	background-color: #4682B4;
+}
+
+.shape-0-shadow {
+	text-shadow: 1px 1px #426998, 2px 2px #426998, 3px 3px #426998, 4px 4px #426998, 5px 5px #426998, 6px 6px #426998, 7px 7px #426998, 8px 8px #426998, 9px 9px #426998, 10px 10px #426998, 11px 11px #426998, 12px 12px #426998, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	-moz-text-shadow: 1px 1px #426998, 2px 2px #426998, 3px 3px #426998, 4px 4px #426998, 5px 5px #426998, 6px 6px #426998, 7px 7px #426998, 8px 8px #426998, 9px 9px #426998, 10px 10px #426998, 11px 11px #426998, 12px 12px #426998, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	
+	-webkit-text-shadow: 1px 1px #426998, 2px 2px #426998, 3px 3px #426998, 4px 4px #426998, 5px 5px #426998, 6px 6px #426998, 7px 7px #426998, 8px 8px #426998, 9px 9px #426998, 10px 10px #426998, 11px 11px #426998, 12px 12px #426998, 13px 13px #4682B4, 14px 14px #4682B4, 15px 15px #4682B4, 16px 16px #4682B4, 17px 17px #4682B4, 18px 18px #4682B4, 19px 19px #4682B4, 20px 20px #4682B4, 21px 21px #4682B4, 22px 22px #4682B4, 23px 23px #4682B4, 24px 24px #4682B4, 25px 25px #4682B4, 26px 26px #4682B4, 27px 27px #4682B4, 28px 28px #4682B4;
+	
+	background-color: #4682B4;
+}
+
+/* Bootstrap Pagination Color */
+.pagination > li > a,
+.pagination > li > span {
+	color: #4682B4;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+	color: #345676;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	background-color: #4682B4;
+	border-color: #4682B4;
+}
