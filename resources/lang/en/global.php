@@ -426,7 +426,7 @@ return [
 	'Send the Job' => 'Send the Job',
 	'Send' => 'Send',
 	'Jobs Found' => 'Jobs Found',
-	'Browse Jobs' => 'Browse Jobs',
+	'Browse Jobs' => 'Browse Projects',
 	'Add Resume' => 'Add Your Porfolio Document',
 	'Add your Resume' => 'Add your Portfolio',
 

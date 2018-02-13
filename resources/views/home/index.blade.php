@@ -24,16 +24,6 @@
 	<div class="clearfix"></div>
 	@include('home.inc.categories')
 	<div class="clearfix"></div>
-	<section class="video-sec dark" id="video">
-		<div class="container">
-			<div class="row">
-				<div class="main-heading">
-					<p>Best For Your Projects</p>
-					<h2>Watch Our <span>video</span></h2></div>
-			</div>
-			<div class="video-part"><a href="#" data-toggle="modal" data-target="#my-video" class="video-btn"><i class="fa fa-play"></i></a></div>
-		</div>
-	</section>
 	<div class="clearfix"></div>
 	<section class="wp-process">
 		<div class="container">
