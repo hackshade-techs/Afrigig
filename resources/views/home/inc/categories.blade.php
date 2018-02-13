@@ -1,4 +1,93 @@
-<div class="col-lg-12 content-box">
+@if (isset($categories) and $categories->count() > 0)
+<section class="first-feature">
+	<div class="container">
+		<div class="all-features">
+			{{-- {{ dd($categories) }} --}}
+			@foreach ($categories as $key => $items)
+			<div class="col-md-3 col-sm-6 small-padding">
+				<a href="{{ lurl(trans('routes.v-search-cat', ['countryCode' => $country->get('icode'), 'catSlug' => $items->slug])) }}">
+					<div class="job-feature">
+						<div class="feature-icon"><i class="fa fa-desktop"></i></div>
+						<div class="feature-caption">
+
+								<h5>{{ $items->name }}</h5>
+
+							<p>{{ $items->description }}</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		  @endforeach
+			{{-- <div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-mobile"></i></div>
+					<div class="feature-caption">
+						<h5>Mobile Developer</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-lightbulb-o"></i></div>
+					<div class="feature-caption">
+						<h5>Creative Designer</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-file-text"></i></div>
+					<div class="feature-caption">
+						<h5>Content Writer</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-hdd-o"></i></div>
+					<div class="feature-caption">
+						<h5>Manager</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-bullhorn"></i></div>
+					<div class="feature-caption">
+						<h5>Sales & Marketing</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-credit-card"></i></div>
+					<div class="feature-caption">
+						<h5>Accountant</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 small-padding">
+				<div class="job-feature">
+					<div class="feature-icon"><i class="fa fa-user"></i></div>
+					<div class="feature-caption">
+						<h5>Management / HR</h5>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+					</div>
+				</div>
+			</div> --}}
+		</div>
+	</div>
+</section>
+@endif
+
+
+{{-- <div class="col-lg-12 content-box">
 	<div class="row row-featured row-featured-category">
 		<div class="col-lg-12 box-title no-border">
 			<div class="inner">
@@ -31,4 +120,4 @@
 	</div>
 </div>
 
-<div style="clear: both"></div>
+<div style="clear: both"></div> --}}
