@@ -1,16 +1,3 @@
-{{--
- * JobClass - Geolocalized Job Board Script
- * Copyright (c) BedigitCom. All Rights Reserved
- *
- * Website: http://www.bedigit.com
- *
- * LICENSE
- * -------
- * This software is furnished under a license and may be used and copied
- * only in accordance with the terms of such license and with the inclusion
- * of the above copyright notice. If you Purchased from Codecanyon,
- * Please read the full License from here - http://codecanyon.net/licenses/standard
---}}
 <?php
 	$fullUrl = url(\Illuminate\Support\Facades\Request::getRequestUri());
 ?>
@@ -59,153 +46,126 @@
 	@if (config('settings.alexa_verify_id'))
 		<meta name="alexaVerifyID" content="{{ config('settings.alexa_verify_id') }}" />
 	@endif
-	
-	@yield('before_styles')
-	
-	<link href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ url('/assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
-	<link href="{{ url('/assets/css/style.css') . '?v=' . time() }}" rel="stylesheet">
-	<link href="{{ url('/assets/css/style/default.css') . '?v=' . time() }}" rel="stylesheet">
-	@if (config('app.theme'))
-		<link href="{{ url('/assets/css/style/' . config('app.theme') . '.css') }}" rel="stylesheet">
-	@endif
-	<link href="{{ url('/assets/css/style/custom.css') }}" rel="stylesheet">
-	<link href="{{ url('/assets/css/fileinput.min.css') }}" media="all" rel="stylesheet" type="text/css"/>
-	<link href="{{ url('/assets/css/owl.carousel.css') }}" rel="stylesheet">
-	<link href="{{ url('/assets/css/owl.theme.css') }}" rel="stylesheet">
-	<link href="{{ url('/assets/css/flags/flags.min.css') }}" rel="stylesheet">
-	
-	@yield('after_styles')
-	
-	@if (config('settings.custom_css'))
-	<style type="text/css">
-		<?php
-		$custom_css = config('settings.custom_css');
-		$custom_css = preg_replace('/<[^>]+>/i', '', $custom_css);
 
-		echo $custom_css . "\n";
-		?>
-	</style>
-	@endif
+  @yield('before_styles')
 
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-	<![endif]-->
+  <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('css/bootstrap-theme.min.css') }}">
+  <link rel="stylesheet" href="{{ url('css/bootstrap-select.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url('css/bootstrap-wysihtml5.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url('css/prettify.css') }}">
+  <link rel="stylesheet" href="{{ url('css/owl.carousel.css') }}">
+  <link rel="stylesheet" href="{{ url('css/owl.theme.css') }}">
+  <link href="{{ url('css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ url('css/line-font.css') }}" rel="stylesheet">
+  <link href="{{ url('css/animate.css') }}" rel="stylesheet">
+  <link href="{{ url('css/bootsnav.css') }}" rel="stylesheet">
+  <link href="{{ url('css/style.css') }}" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" id="jssDefault" href="{{ url('css/colors/green-style.css') }}">
+  <link href="{{ url('css/responsiveness.css') }}" rel="stylesheet">
 
-	<script>
-		paceOptions = {
-			elements: true
-		};
-	</script>
-	<script src="{{ url('/assets/js/pace.min.js') }}"></script>
+  @yield('after_styles')
+
 </head>
+
 <body>
+  <div class="wrapper">
+		@section('header')
+			@if (Auth::check())
+				@include('layouts.inc.header', ['user' => $user])
+			@else
+				@include('layouts.inc.header')
+			@endif
+		@show
 
-<div id="wrapper">
+    @section('search')
+    @show
+{{--
+    @if (isset($site_country_info))
+      <div class="container" style="margin-bottom: -30px; margin-top: 20px;">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="alert alert-warning">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              {!! $site_country_info !!}
+            </div>
+          </div>
+        </div>
+      </div>
+    @endif --}}
 
-	@section('header')
-		@if (Auth::check())
-			@include('layouts.inc.header', ['user' => $user])
-		@else
-			@include('layouts.inc.header')
-		@endif
-	@show
+    @yield('content')
 
-	@section('search')
-	@show
+    @section('info')
+    @show
 
-	@if (isset($site_country_info))
-		<div class="container" style="margin-bottom: -30px; margin-top: 20px;">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="alert alert-warning">
-						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-						{!! $site_country_info !!}
-					</div>
-				</div>
-			</div>
-		</div>
-	@endif
+    <div class="clearfix"></div>
 
-	@yield('content')
+    @section('footer')
+      @include('layouts.inc.footer')
+    @show
 
-	@section('info')
-	@show
+    @section('modal_location')
+    @show
+    @section('modal_abuse')
+    @show
+    @section('modal_message')
+    @show
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				@section('footer')
-					@include('layouts.inc.footer')
-				@show
-			</div>
-		</div>
-	</div>
+    @yield('before_scripts')
 
-</div>
+    <script type="text/javascript" src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('js/bootsnav.js') }}"></script>
+    <script src="{{ url('js/viewportchecker.js') }}"></script>
+    <script src="{{ url('js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ url('js/wysihtml5-0.3.0.js') }}"></script>
+    <script src="{{ url('js/bootstrap-wysihtml5.js') }}"></script>
+    <script type="text/javascript" src="{{ url('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url('js/custom.js') }}"></script>
+    <script src="{{ url('/assets/plugins/SocialShare/SocialShare.min.js') }}"></script>
 
-@section('modal_location')
-@show
-@section('modal_abuse')
-@show
-@section('modal_message')
-@show
+    @yield('after_scripts')
 
-@yield('before_scripts')
+    <script>
+        <?php
+        $tracking_code = config('settings.tracking_code');
+        $tracking_code = preg_replace('#<script(.*?)>(.*?)</script>#is', '$2', $tracking_code);
+        echo $tracking_code . "\n";
+        ?>
+    </script>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script> -->
-<script src="{{ url('/assets/js/jquery/1.10.1/jquery-1.10.1.js') }}"></script>
-<script src="{{ url('/assets/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ url('/assets/js/jquery.matchHeight-min.js') }}"></script>
-<script src="{{ url('/assets/plugins/jquery.fs.scroller/jquery.fs.scroller.min.js') }}"></script>
-<script src="{{ url('/assets/plugins/select2/js/select2.full.min.js') }}"></script>
-<script src="{{ url('/assets/plugins/SocialShare/SocialShare.min.js') }}"></script>
-<script src="{{ url('/assets/js/owl.carousel.min.js') }}"></script>
-<script src="{{ url('/assets/js/hideMaxListItem-min.js') }}"></script>
-<script language="javascript">
-	var siteUrl = '<?php echo url('/'); ?>';
-	var languageCode = '<?php echo $lang->get('abbr'); ?>';
-	var langLayout = {
-		'hideMaxListItems': {
-			'moreText': "{{ t('View More') }}",
-			'lessText': "{{ t('View Less') }}"
-		}
-	};
-	$(document).ready(function () {
-		/* Select Boxes */
-		$(".selecter").select2({
-			language: '<?php echo $lang->get('abbr'); ?>',
-			dropdownAutoWidth: 'true',
-			minimumResultsForSearch: Infinity
-		});
-		/* Searchable Select Boxes */
-		$(".sselecter").select2({
-			language: '<?php echo $lang->get('abbr'); ?>',
-			dropdownAutoWidth: 'true',
-		});
+    <script language="javascript">
+    	var siteUrl = '<?php echo url('/'); ?>';
+    	var languageCode = '<?php echo $lang->get('abbr'); ?>';
+    	var langLayout = {
+    		'hideMaxListItems': {
+    			'moreText': "{{ t('View More') }}",
+    			'lessText': "{{ t('View Less') }}"
+    		}
+    	};
+    	$(document).ready(function () {
+    		/* Select Boxes */
+    		$(".selecter").select2({
+    			language: '<?php echo $lang->get('abbr'); ?>',
+    			dropdownAutoWidth: 'true',
+    			minimumResultsForSearch: Infinity
+    		});
+    		/* Searchable Select Boxes */
+    		$(".sselecter").select2({
+    			language: '<?php echo $lang->get('abbr'); ?>',
+    			dropdownAutoWidth: 'true',
+    		});
 
-		/* Social Share */
-		$('.share').ShareLink({
-			title: '<?php echo addslashes(MetaTag::get('title')); ?>',
-			text: '<?php echo addslashes(MetaTag::get('title')); ?>',
-			url: '<?php echo $fullUrl; ?>'
-		});
-	});
-</script>
-<script src="{{ url('/assets/js/script.js?time=' . time()) }}"></script>
-<script type="text/javascript" src="{{ url('/assets/plugins/autocomplete/jquery.mockjax.js') }}"></script>
-<script type="text/javascript" src="{{ url('/assets/plugins/autocomplete/jquery.autocomplete.min.js') }}"></script>
-<script type="text/javascript" src="{{ url('/assets/js/app/autocomplete.cities.js') }}"></script>
+    		/* Social Share */
+    		$('.share').ShareLink({
+    			title: '<?php echo addslashes(MetaTag::get('title')); ?>',
+    			text: '<?php echo addslashes(MetaTag::get('title')); ?>',
+    			url: '<?php echo $fullUrl; ?>'
+    		});
+    	});
+    </script>
 
-@yield('after_scripts')
-
-<script>
-    <?php
-    $tracking_code = config('settings.tracking_code');
-    $tracking_code = preg_replace('#<script(.*?)>(.*?)</script>#is', '$2', $tracking_code);
-    echo $tracking_code . "\n";
-    ?>
-</script>
+  </div>
 </body>
 </html>
