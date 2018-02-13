@@ -49,6 +49,7 @@ Route::group([
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function() {
     CRUD::resource('ad', 'AdController');
+    CRUD::resource('skill', 'SkillController');
     CRUD::resource('category', 'CategoryController');
     CRUD::resource('picture', 'PictureController');
     CRUD::resource('item_type', 'AdTypeController');

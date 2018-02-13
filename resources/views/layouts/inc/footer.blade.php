@@ -4,11 +4,16 @@
 			<div class="col-md-4 col-sm-4"><img src="img/footer-logo.png" class="img-responsive" alt="" /> </div>
 			<div class="col-md-8 co-sm-8 pull-right">
 				<ul>
-					<li><a href="index.html" title="">Home</a></li>
-					<li><a href="blog.html" title="">Blog</a></li>
-					<li><a href="404.html" title="">404</a></li>
-					<li><a href="faq.html" title="">FAQ</a></li>
-					<li><a href="contact.html" title="">Contact Us</a></li>
+					@if ($pages->count() > 0)
+	            @foreach($pages as $page)
+	               <li> <a href="{{ lurl(trans('routes.v-page', ['slug' => $page->slug])) }}"> {{ $page->name }} </a></li>
+	            @endforeach
+	        @endif
+					<li><a href="{{ lurl(trans('routes.contact')) }}"> {{ t('Contact') }} </a></li>
+					<li><a href="{{ lurl(trans('routes.v-sitemap', ['countryCode' => $country->get('icode')])) }}"> {{ t('Sitemap') }} </a></li>
+					@if (\App\Models\Country::where('active', 1)->count() > 1)
+						<li><a href="{{ lurl(trans('routes.countries')) }}"> {{ t('Countries') }} </a></li>
+					@endif
 				</ul>
 			</div>
 		</div>
@@ -24,9 +29,9 @@
 						<p><strong>Email:</strong> Support@careerdesk</p>
 						<p><strong>Call:</strong> <a href="tel:+15555555555">555-555-1234</a></p>
 						<ul class="footer-social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="{{ config('settings.facebook_page_url') }}"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="{{ config('settings.twitter_url') }}"><i class="fa fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
@@ -77,7 +82,7 @@
 	</div>
 	<div class="row copyright">
 		<div class="container">
-			<p>Copyright Job Stock © 2017. All Rights Reserved </p>
+			<p>&copy; {{ date('Y') }} <a href="{{ url('/') }}" style="padding: 0;">{{ config('settings.app_name') }}</a>. All Rights Reserved </p>
 		</div>
 	</div>
 </footer>

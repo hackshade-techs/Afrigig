@@ -2,11 +2,11 @@
 	<div class="container">
 		<ul class="pull-left navbar-link footer-nav list-inline" style="margin-left: -20px;">
 			<li>
-                @if ($pages->count() > 0)
-                    @foreach($pages as $page)
-                        <a href="{{ lurl(trans('routes.v-page', ['slug' => $page->slug])) }}"> {{ $page->name }} </a>
-                    @endforeach
-                @endif
+        @if ($pages->count() > 0)
+            @foreach($pages as $page)
+                <a href="{{ lurl(trans('routes.v-page', ['slug' => $page->slug])) }}"> {{ $page->name }} </a>
+            @endforeach
+        @endif
 				<a href="{{ lurl(trans('routes.contact')) }}"> {{ t('Contact') }} </a>
 				<a href="{{ lurl(trans('routes.v-sitemap', ['countryCode' => $country->get('icode')])) }}"> {{ t('Sitemap') }} </a>
 				@if (\App\Models\Country::where('active', 1)->count() > 1)

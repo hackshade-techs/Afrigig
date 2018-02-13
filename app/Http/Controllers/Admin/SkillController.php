@@ -15,7 +15,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Category;
+use App\Models\Skill;
 use Illuminate\Support\Facades\Request;
 use Larapen\Admin\app\Http\Controllers\PanelController;
 // VALIDATION: change the requests to match your own file names if you need form validation
@@ -33,9 +33,9 @@ class CategoryController extends PanelController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-        $this->xPanel->setModel('App\Models\Category');
-        $this->xPanel->setRoute(config('larapen.admin.route_prefix', 'admin') . '/category');
-        $this->xPanel->setEntityNameStrings(__t('category'), __t('categories'));
+        $this->xPanel->setModel('App\Models\Skill');
+        $this->xPanel->setRoute(config('larapen.admin.route_prefix', 'admin') . '/skill');
+        $this->xPanel->setEntityNameStrings(__t('skill'), __t('skills'));
         $this->xPanel->enableReorder('name', 1);
         $this->xPanel->enableDetailsRow();
         $this->xPanel->allowAccess(['reorder', 'details_row']);
@@ -55,23 +55,12 @@ class CategoryController extends PanelController
             'name'  => 'name',
             'label' => __t("Name"),
         ]);
-
-        $this->xPanel->addColumn([
-             'label' => 'Parent',
-             'type' => 'select',
-             'name' => 'parent_id',
-             'entity' => 'parent',
-             'attribute' => 'name',
-             'model' => "App\Models\Category",
-         ]);
-
         $this->xPanel->addColumn([
             'name'          => 'active',
             'label'         => __t("Active"),
             'type'          => 'model_function',
             'function_name' => 'getActiveHtml',
         ]);
-
 
         // FIELDS
         $this->xPanel->addField([
@@ -82,7 +71,6 @@ class CategoryController extends PanelController
                 'placeholder' => __t("Name"),
             ],
         ]);
-
         $this->xPanel->addField([
             'name'       => 'slug',
             'label'      => __t('Slug'),
@@ -92,16 +80,6 @@ class CategoryController extends PanelController
             ],
             'hint'       => __t('Will be automatically generated from your name, if left empty.'),
         ]);
-
-        $this->xPanel->addField([
-            'label' => 'Parent',
-            'type' => 'select',
-            'name' => 'parent_id',
-            'entity' => 'parent',
-            'attribute' => 'name',
-            'model' => "App\Models\Category",
-        ]);
-
         $this->xPanel->addField([
             'name'       => 'description',
             'label'      => __t('Description'),
@@ -129,7 +107,7 @@ class CategoryController extends PanelController
 
     public function categories()
     {
-        $entries = Category::where('translation_lang', config('app.locale'))->where('parent_id', 0)->orderBy('lft')->get();
+        $entries = Skill::where('translation_lang', config('app.locale'))->where('parent_id', 0)->orderBy('lft')->get();
         if (is_null($entries)) {
             return [];
         }
